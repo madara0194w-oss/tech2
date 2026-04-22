@@ -74,13 +74,15 @@ export function Hero() {
           <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden z-20">
             {/* Main Video */}
             <video 
-              src="/video1.mp4" 
               autoPlay
               loop
               muted
               playsInline
               className="w-full h-auto block"
-            />
+            >
+              <source src="/video1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </motion.div>
       </div>

@@ -14,13 +14,14 @@ export function About() {
             <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden z-20">
               {/* Main Video */}
               <video 
-                src="/video3.mp4" 
                 autoPlay
                 loop
                 muted
                 playsInline
                 className="w-full h-auto block"
-              />
+              >
+                <source src="/video3.mp4" type="video/mp4" />
+              </video>
             </div>
           </motion.div>
 
