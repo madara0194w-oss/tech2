@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-import video1 from '../../assets/video1.mp4';
 
 export function Hero() {
   return (
@@ -81,7 +80,7 @@ export function Hero() {
               playsInline
               className="w-full h-auto block"
             >
-              <source src={video1} type="video/mp4" />
+              <source src="https://res.cloudinary.com/drufv7gh5/video/upload/v1776891959/Developer_thinking_with_202604230004_fnrsuz.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

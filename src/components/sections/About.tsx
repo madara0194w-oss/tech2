@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import video3 from '../../assets/video3.mp4';
 
 export function About() {
   return (
@@ -21,7 +20,7 @@ export function About() {
                 playsInline
                 className="w-full h-auto block"
               >
-                <source src={video3} type="video/mp4" />
+                <source src="https://res.cloudinary.com/drufv7gh5/video/upload/v1776891959/Developers_at_table_202604230237_bwkuxq.mp4" type="video/mp4" />
               </video>
             </div>
           </motion.div>
