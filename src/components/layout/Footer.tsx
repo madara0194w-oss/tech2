@@ -20,7 +20,7 @@ export function Footer() {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gray-200/50 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div>
             <a href="#" className="flex items-center gap-2 mb-6 group">
@@ -113,7 +113,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-gray-200 flex flex-col lg:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm text-center md:text-left">
             Copyright 2026 NexTechZen. All Rights Reserved. Made with passion in Chittagong, Bangladesh.
           </p>
