@@ -32,15 +32,15 @@ export function Navbar() {
         isScrolled ? 'glass py-4' : 'bg-transparent py-6'
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-0 group">
+        <Link to="/" className="flex items-center gap-0 group -ml-2 sm:-ml-1 lg:ml-0">
           <img 
             src="https://res.cloudinary.com/drufv7gh5/image/upload/v1776345587/image-removebg-preview_8_jx6n6q.png" 
             alt="NexTechZen Logo" 
-            className="w-[100px] h-auto object-contain"
+            className="w-[80px] sm:w-[100px] h-auto object-contain"
           />
-          <span className={`font-heading font-bold text-lg tracking-wide hidden sm:block text-gray-900 -ml-6`}>
+          <span className={`font-heading font-bold text-lg tracking-wide hidden sm:block text-gray-900 -ml-5 sm:-ml-6`}>
             NexTech<span className="text-gray-900">Zen</span>
           </span>
         </Link>
