@@ -16,7 +16,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="text-4xl text-gray-900 leading-tight drop-shadow-sm capitalize"
           >
-            <span className="font-bold block whitespace-nowrap text-3xl sm:text-4xl">Design and Development</span>
+            <span className="font-bold block whitespace-nowrap text-[1.55rem] sm:text-4xl tracking-tighter">Design and Development</span>
             <span className="font-normal block mt-1">Website</span>
           </motion.h2>
         </div>
