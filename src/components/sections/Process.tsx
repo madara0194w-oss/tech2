@@ -60,9 +60,9 @@ export function Process() {
 
         <div className="relative">
           {/* Connecting Line */}
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2 hidden lg:block"></div>
+          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2 hidden xl:block"></div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 relative z-10">
+          <div className="grid grid-cols-1 xl:grid-cols-6 gap-8 relative z-10">
             {steps.map((step, index) => (
               <motion.div
                 key={index}

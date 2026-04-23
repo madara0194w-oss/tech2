@@ -29,7 +29,7 @@ export function Blog() {
   return (
     <section id="blog" className="py-24 relative bg-gray-100/50 border-y border-gray-200">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col xl:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ export function Blog() {
           </motion.a>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
           {posts.map((post, index) => (
             <motion.article
               key={index}

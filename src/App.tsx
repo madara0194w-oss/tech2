@@ -19,7 +19,7 @@ export default function App() {
     <div className="min-h-screen bg-[#F5F6FC] text-gray-900 font-sans selection:bg-gray-300 selection:text-gray-900 relative z-0">
       {/* Light Background Pattern */}
       <div className="fixed inset-0 z-[-1] bg-[#F5F6FC]">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div className="absolute inset-0 hidden xl:block bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       </div>
 
       <Navbar />

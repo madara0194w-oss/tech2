@@ -7,9 +7,9 @@ export function Hero() {
       {/* Background Effects */}
       <div className="absolute inset-0 z-0 bg-[#F5F6FC]"></div>
 
-      <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-12">
+      <div className="container mx-auto px-6 relative z-10 flex flex-col xl:flex-row items-center gap-12">
         {/* Mobile Text (Overlaying Video) */}
-        <div className="lg:hidden w-full text-center z-30 relative -mb-24 mt-4">
+        <div className="xl:hidden w-full text-center z-30 relative -mb-24 mt-4">
           <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -21,14 +21,14 @@ export function Hero() {
           </motion.h2>
         </div>
 
-        <div className="hidden lg:block flex-1 text-center lg:text-left pt-10 lg:pt-0">
+        <div className="hidden xl:block flex-1 text-center xl:text-left pt-10 xl:pt-0">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-gray-900"
           >
-            Transform Your Vision Into <br className="hidden lg:block" />
+            Transform Your Vision Into <br className="hidden xl:block" />
             <span className="text-gray-900">Digital Reality</span>
           </motion.h1>
           
@@ -36,7 +36,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto xl:mx-0 leading-relaxed"
           >
             NexTechZen crafts pixel-perfect, lightning-fast websites and powerful web applications that drive real business growth.
           </motion.p>
@@ -45,7 +45,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+            className="flex flex-col sm:flex-row items-center gap-4 justify-center xl:justify-start"
           >
             <a 
               href="#contact" 
