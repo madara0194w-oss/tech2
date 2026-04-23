@@ -68,7 +68,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="flex-1 relative w-full"
+          className="flex-1 relative w-full flex flex-col items-center"
         >
           <div className="relative w-full max-w-md mx-auto z-20">
             {/* Main Video Restored - Shadow and rounding removed */}
@@ -82,6 +82,17 @@ export function Hero() {
               <source src="https://res.cloudinary.com/drufv7gh5/video/upload/v1776891959/Developer_thinking_with_202604230004_fnrsuz.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+          </div>
+          
+          {/* Mobile/Tablet CTA (Below Video) */}
+          <div className="xl:hidden w-full text-center mt-6 z-30">
+            <a 
+              href="#contact" 
+              className="inline-flex px-8 py-4 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-xl shadow-gray-900/20 hover:scale-105 items-center justify-center gap-2"
+            >
+              Book a Call
+              <ArrowRight size={18} />
+            </a>
           </div>
         </motion.div>
       </div>
