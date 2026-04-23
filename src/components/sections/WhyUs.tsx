@@ -4,7 +4,7 @@ export function WhyUs() {
   return (
     <section className="py-24 relative bg-gray-100/50 border-y border-gray-200">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col md:flex-row items-center gap-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}

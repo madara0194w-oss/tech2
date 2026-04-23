@@ -95,13 +95,13 @@ export function Contact() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 space-y-8"
+            className="md:col-span-2 space-y-8"
           >
             <div className="bg-white p-8 rounded-3xl border border-gray-200 h-full shadow-lg">
               <h3 className="text-2xl font-bold mb-8 font-heading text-gray-900">Get in Touch</h3>
@@ -161,7 +161,7 @@ export function Contact() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-3"
+            className="md:col-span-3"
           >
             <form className="bg-white p-8 md:p-10 rounded-3xl border border-gray-200 shadow-lg" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">

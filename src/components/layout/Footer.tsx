@@ -20,7 +20,7 @@ export function Footer() {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gray-200/50 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div>
             <a href="#" className="flex items-center gap-2 mb-6 group">
