@@ -8,14 +8,14 @@ const deepSteps = [
   {
     icon: <Lightbulb size={32} />,
     title: "Discovery & Strategy",
-    image: "https://images.unsplash.com/photo-1454165833762-02ac4f4089e8?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop",
     details: "We start with a comprehensive workshop to understand your business ecosystem. From stakeholder interviews to competitor analysis, we ensure the project has a rock-solid strategic foundation.",
     outcomes: ["Business Requirement Document", "Technical Feasibility Study", "Project Timeline & Roadmap"]
   },
   {
     icon: <PenTool size={32} />,
     title: "Research & Wireframing",
-    image: "https://images.unsplash.com/photo-1581291417004-6e741ada732b?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop",
     details: "User experience centers on structure. We build low-fidelity wireframes that map out every user interaction, ensuring intuitive navigation and logical data flow before any visual design begins.",
     outcomes: ["User Flow Diagrams", "Low-Fidelity Wireframes", "Interactive Simple Prototypes"]
   },
