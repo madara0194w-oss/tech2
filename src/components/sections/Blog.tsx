@@ -20,7 +20,7 @@ const posts = [
     title: "The Future of E-commerce in South Asia",
     category: "Business",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1974&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2000&auto=format&fit=crop",
     date: "Sep 28, 2026"
   }
 ];

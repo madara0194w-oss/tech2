@@ -44,8 +44,8 @@ export function WhyUs() {
             viewport={{ once: true }}
             className="flex-1 relative w-full"
           >
-            <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden z-20">
-              {/* Main Video */}
+            <div className="relative w-full max-w-md mx-auto z-20">
+              {/* Main Video Restored - Shadow and rounding removed */}
               <video 
                 autoPlay
                 loop

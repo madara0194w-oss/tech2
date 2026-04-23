@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,13 +17,13 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'About', href: '#about' },
-    { name: 'Process', href: '#process' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'About', href: '/about' },
+    { name: 'Process', href: '/process' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -32,38 +34,40 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-0 group">
           <img 
-            src="https://res.cloudinary.com/drufv7gh5/image/upload/v1776279867/Gemini_Generated_Image_so26r5so26r5so26-modified_s2cxop.png" 
+            src="https://res.cloudinary.com/drufv7gh5/image/upload/v1776345587/image-removebg-preview_8_jx6n6q.png" 
             alt="NexTechZen Logo" 
-            className="w-10 h-10 object-contain"
+            className="w-[100px] h-auto object-contain"
           />
-          <span className={`font-heading font-bold text-xl tracking-wide hidden sm:block text-gray-900`}>
+          <span className={`font-heading font-bold text-lg tracking-wide hidden sm:block text-gray-900 -ml-6`}>
             NexTech<span className="text-gray-900">Zen</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden xl:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
-              className={`text-sm font-medium transition-colors text-gray-600 hover:text-gray-900`}
+              to={link.href}
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === link.href ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+              }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* CTA Button */}
         <div className="hidden xl:block">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-gray-900 rounded-full hover:bg-black transition-all duration-300 shadow-lg hover:scale-105"
           >
             Get Free Quote
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -84,22 +88,24 @@ export function Navbar() {
           className="xl:hidden absolute top-full left-0 right-0 glass border-t border-white/10 py-4 px-6 flex flex-col gap-4 shadow-2xl"
         >
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
-              className="text-base font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              to={link.href}
+              className={`text-base font-medium transition-colors ${
+                location.pathname === link.href ? 'text-gray-900 underline underline-offset-4' : 'text-gray-600 hover:text-gray-900'
+              }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center justify-center px-6 py-3 mt-2 text-sm font-medium text-white bg-gray-900 rounded-full hover:bg-black transition-all duration-300 shadow-md"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Get Free Quote
-          </a>
+          </Link>
         </motion.div>
       )}
     </header>

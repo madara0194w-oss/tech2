@@ -70,8 +70,8 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4 }}
           className="flex-1 relative w-full"
         >
-          <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden z-20">
-            {/* Main Video */}
+          <div className="relative w-full max-w-md mx-auto z-20">
+            {/* Main Video Restored - Shadow and rounding removed */}
             <video 
               autoPlay
               loop

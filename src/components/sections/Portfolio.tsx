@@ -13,14 +13,14 @@ const projects = [
     title: "Doctor Portfolio",
     description: "A professional portfolio and appointment booking system for medical professionals.",
     tags: ["React", "Booking", "UI/UX"],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop",
     link: "https://doctorportfolio1.netlify.app/"
   },
   {
     title: "Aurelia Restaurant",
     description: "An elegant dining experience website with menu showcases and reservation capabilities.",
     tags: ["Vue.js", "Animations", "Design"],
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop",
     link: "https://aurelia1.netlify.app/"
   }
 ];

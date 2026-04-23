@@ -11,8 +11,8 @@ export function About() {
             viewport={{ once: true }}
             className="flex-1 relative w-full"
           >
-            <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden z-20">
-              {/* Main Video */}
+            <div className="relative w-full max-w-md mx-auto z-20">
+              {/* Main Video Restored - Shadow and rounding removed */}
               <video 
                 autoPlay
                 loop
@@ -20,7 +20,7 @@ export function About() {
                 playsInline
                 className="w-full h-auto block"
               >
-                <source src="https://res.cloudinary.com/drufv7gh5/video/upload/v1776891959/Developers_at_table_202604230237_bwkuxq.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/drufv7gh5/video/upload/v1776934927/watermark_removed_5c507c89-c7d8-4495-bb33-ba876aa386b4_zk5xbv.mp4" type="video/mp4" />
               </video>
             </div>
           </motion.div>

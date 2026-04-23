@@ -1,13 +1,14 @@
 import { ArrowUp, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   const quickLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About Us', href: '#about' },
-    { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Our Process', href: '#process' },
-    { label: 'Blog', href: '#blog' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Our Process', href: '/process' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const scrollToTop = () => {
@@ -23,7 +24,7 @@ export function Footer() {
         <div className="grid grid-cols-1 xl:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <a href="#" className="flex items-center gap-2 mb-6 group">
+            <Link to="/" className="flex items-center gap-2 mb-6 group">
               <img
                 src="https://res.cloudinary.com/drufv7gh5/image/upload/v1776279867/Gemini_Generated_Image_so26r5so26r5so26-modified_s2cxop.png"
                 alt="NexTechZen Logo"
@@ -32,7 +33,7 @@ export function Footer() {
               <span className="font-heading font-bold text-xl tracking-wide text-gray-900">
                 NexTech<span className="text-gray-900">Zen</span>
               </span>
-            </a>
+            </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
               Zen in Technology - Crafting Digital Excellence. We build premium digital experiences that drive real business growth.
             </p>
@@ -58,10 +59,10 @@ export function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-gray-600 hover:text-gray-900 transition-colors text-sm flex items-center gap-2">
+                  <Link to={link.href} className="text-gray-600 hover:text-gray-900 transition-colors text-sm flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-gray-500"></span>
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -72,18 +73,18 @@ export function Footer() {
             <h4 className="font-heading font-semibold text-lg mb-6 text-gray-900">Services</h4>
             <ul className="space-y-3">
               {[
-                'Custom Web Development',
-                'E-commerce Platforms',
-                'SaaS Applications',
-                'UI/UX Design',
-                'SEO & Marketing',
-                'Maintenance & Support'
+                { name: 'Custom Web Development', href: '/services' },
+                { name: 'E-commerce Platforms', href: '/services' },
+                { name: 'SaaS Applications', href: '/services' },
+                { name: 'UI/UX Design', href: '/services' },
+                { name: 'SEO & Marketing', href: '/services' },
+                { name: 'Maintenance & Support', href: '/services' }
               ].map((service) => (
-                <li key={service}>
-                  <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors text-sm flex items-center gap-2">
+                <li key={service.name}>
+                  <Link to={service.href} className="text-gray-600 hover:text-gray-900 transition-colors text-sm flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-gray-500"></span>
-                    {service}
-                  </a>
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
