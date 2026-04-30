@@ -22,7 +22,7 @@ export function Contact() {
     const BOT_TOKEN = '8787613305:AAFYwFGhTJPfIpn5Y-7vZW3-y99qykPaIy0';
     // IMPORTANT: You need to replace this with your actual Chat ID where you want to receive messages.
     // E.g. CHAT_ID = '123456789' or '-1001234567890' for groups.
-    const CHAT_ID = '7120221800'; 
+    const CHAT_ID = '7120221800';
 
     const text = `
 📩 *New Contact Inquiry*
@@ -72,10 +72,10 @@ export function Contact() {
     <section id="contact" className="py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gray-200/50 rounded-full blur-[120px] -z-10"></div>
-      
+
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -84,7 +84,7 @@ export function Contact() {
             Ready to Build Something <br className="hidden xl:block" />
             <span className="text-gray-900">Extraordinary Together?</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -97,7 +97,7 @@ export function Contact() {
 
         <div className="grid grid-cols-1 xl:grid-cols-5 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -105,7 +105,7 @@ export function Contact() {
           >
             <div className="bg-white p-8 rounded-3xl border border-gray-200 h-full shadow-lg">
               <h3 className="text-2xl font-bold mb-8 font-heading text-gray-900">Get in Touch</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-900 shrink-0">
@@ -114,13 +114,13 @@ export function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1 text-gray-900">Office Address</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      shah amanat hosing society<br />
+                      shah amanat housing society<br />
                       rahattarpool<br />
                       chattagram
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-900 shrink-0">
                     <Phone size={20} />
@@ -128,12 +128,11 @@ export function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1 text-gray-900">Phone & WhatsApp</h4>
                     <p className="text-gray-600 text-sm">
-                      +8801621030860<br />
                       +8801862059959
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-900 shrink-0">
                     <Mail size={20} />
@@ -141,7 +140,7 @@ export function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1 text-gray-900">Email Us</h4>
                     <p className="text-gray-600 text-sm">
-                      abdullaharafinrahat@gmail.com
+                      nextechzen01@gmail.com
                     </p>
                   </div>
                 </div>
@@ -157,7 +156,7 @@ export function Contact() {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -167,8 +166,8 @@ export function Contact() {
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -179,8 +178,8 @@ export function Contact() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Business Email</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -190,12 +189,12 @@ export function Contact() {
                   />
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
@@ -205,7 +204,7 @@ export function Contact() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
-                  <select 
+                  <select
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
@@ -223,7 +222,7 @@ export function Contact() {
 
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-2">Approximate Budget</label>
-                <select 
+                <select
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
@@ -239,7 +238,7 @@ export function Contact() {
 
               <div className="mb-8">
                 <label className="block text-sm font-medium text-gray-700 mb-2">Detailed Message</label>
-                <textarea 
+                <textarea
                   rows={4}
                   name="message"
                   value={formData.message}
@@ -261,7 +260,7 @@ export function Contact() {
                 </div>
               )}
 
-              <button 
+              <button
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-black transition-all duration-300 shadow-md hover:shadow-xl hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"

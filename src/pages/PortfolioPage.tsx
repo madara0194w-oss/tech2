@@ -30,10 +30,10 @@ export default function PortfolioPage() {
   }, []);
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-[#f3f1ff]">
       <Portfolio />
 
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-24 bg-[#f3f1ff] border-t border-gray-100">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">Case <span className="text-gray-900">Studies</span></h2>
@@ -56,7 +56,7 @@ export default function PortfolioPage() {
                       {study.role}
                     </div>
                     <h3 className="text-4xl font-bold text-gray-900">{study.title}</h3>
-                    
+                     
                     <div className="space-y-6">
                       <div>
                         <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">The Challenge</h4>
@@ -72,7 +72,7 @@ export default function PortfolioPage() {
                       </div>
                     </div>
                   </div>
-                  
+                   
                   <div className="flex-1 relative">
                     <div className="aspect-video xl:aspect-square rounded-[3rem] overflow-hidden border border-gray-200 shadow-2xl">
                       <img 
@@ -90,7 +90,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-900 text-white">
+      <section className="py-24 bg-[#f3f1ff] text-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col xl:flex-row justify-between items-center gap-12">
             <div className="max-w-xl">

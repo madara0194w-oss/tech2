@@ -44,12 +44,12 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-[#f3f1ff]">
       <About />
       <WhyUs />
 
       {/* Values Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#f3f1ff]">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-12">
             {coreValues.map((value, index) => (
@@ -75,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* Pillars of Strength */}
-      <section className="py-24 bg-gray-50 overflow-hidden">
+      <section className="py-24 bg-[#f3f1ff] overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">The Pillars of <span className="text-gray-900">NexTechZen</span></h2>
@@ -126,7 +126,7 @@ export default function AboutPage() {
       </section>
 
       {/* Bangladesh Roots Team Background */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#f3f1ff]">
         <div className="container mx-auto px-6">
           <div className="flex flex-col xl:flex-row gap-16 items-center">
             <div className="flex-1 space-y-8">

@@ -55,7 +55,7 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-[#f3f1ff]">
       <Services />
 
       <section className="py-24 bg-white border-t border-gray-100">

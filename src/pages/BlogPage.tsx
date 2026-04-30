@@ -21,11 +21,11 @@ export default function BlogPage() {
   }, []);
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-[#f3f1ff]">
       <Blog />
 
       {/* Featured & Search */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-24 bg-[#f3f1ff] border-t border-gray-100">
         <div className="container mx-auto px-6">
           <div className="flex flex-col xl:flex-row gap-12 mb-20 items-center justify-between">
             <div className="relative w-full xl:max-w-md">
@@ -90,14 +90,14 @@ export default function BlogPage() {
       </section>
 
       {/* Subscription Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-[#f3f1ff]">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto rounded-[3rem] bg-white border border-gray-200 p-12 text-center relative overflow-hidden">
              <div className="absolute top-0 right-0 w-64 h-64 bg-gray-100 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
              <Tag className="mx-auto mb-6 text-gray-300" size={48} />
              <h2 className="text-3xl font-bold mb-4">Never miss an insight</h2>
              <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">Get the latest trends twice a month. No spam, only pure value from the Zen Lab team.</p>
-             <form className="flex flex-col md:flex-row gap-4 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>
+             <form className="flex flex-col md:flex-row gap-4 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()} >
                <input 
                  type="email" 
                  placeholder="your@email.com" 
@@ -107,12 +107,12 @@ export default function BlogPage() {
                  Join Newsletter
                </button>
              </form>
-          </div>
-        </div>
-      </section>
+           </div>
+         </div>
+       </section>
 
       {/* Categories Grid (Expansion) */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#f3f1ff]">
         <div className="container mx-auto px-6">
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
              {[
@@ -126,10 +126,10 @@ export default function BlogPage() {
                <motion.div 
                  key={i}
                  initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="group border-t border-gray-100 pt-8"
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: i * 0.05 }}
+                 className="group border-t border-gray-100 pt-8"
                >
                  <div className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">{art.cat}</div>
                  <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-gray-600 transition-colors cursor-pointer">
@@ -144,8 +144,8 @@ export default function BlogPage() {
                </motion.div>
              ))}
            </div>
-        </div>
-      </section>
-    </div>
-  );
+         </div>
+       </section>
+     </div>
+   );
 }

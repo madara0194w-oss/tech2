@@ -25,11 +25,11 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-[#f3f1ff]">
       <Contact />
 
       {/* Map & Additional Info */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-24 bg-[#f3f1ff] border-t border-gray-100">
         <div className="container mx-auto px-6">
           <div className="flex flex-col xl:flex-row gap-16">
             <div className="flex-1 space-y-10">
@@ -92,7 +92,7 @@ export default function ContactPage() {
       </section>
 
       {/* Social Links */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-[#f3f1ff]">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-8">
             {['LinkedIn', 'Twitter', 'Facebook', 'Instagram', 'Dribbble'].map((social) => (

@@ -55,7 +55,7 @@ export default function ProcessPage() {
   }, []);
 
   return (
-    <div className="pt-20 bg-white">
+    <div className="pt-20 bg-[#f3f1ff]">
       <Process />
 
       <section className="py-24 border-t border-gray-100">

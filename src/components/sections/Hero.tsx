@@ -10,7 +10,7 @@ export function Hero() {
       <div className="container mx-auto px-6 relative z-10 flex flex-col xl:flex-row items-center gap-12">
         {/* Mobile Text (Overlaying Video) */}
         <div className="xl:hidden w-full text-center z-30 relative -mb-24 mt-4">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -22,7 +22,7 @@ export function Hero() {
         </div>
 
         <div className="hidden xl:block flex-1 text-center xl:text-left pt-10 xl:pt-0">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -31,8 +31,8 @@ export function Hero() {
             Transform Your Vision Into <br className="hidden xl:block" />
             <span className="text-gray-900">Digital Reality</span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -40,22 +40,22 @@ export function Hero() {
           >
             NexTechZen crafts pixel-perfect, lightning-fast websites and powerful web applications that drive real business growth.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center gap-4 justify-center xl:justify-start"
           >
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-xl shadow-gray-900/20 hover:scale-105 flex items-center justify-center gap-2"
             >
               Start Your Project Now
               <ArrowRight size={18} />
             </a>
-            <a 
-              href="#portfolio" 
+            <a
+              href="#portfolio"
               className="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 border border-gray-200 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300 flex items-center justify-center"
             >
               Explore Our Portfolio
@@ -64,7 +64,7 @@ export function Hero() {
         </div>
 
         {/* Visual Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
@@ -72,22 +72,22 @@ export function Hero() {
         >
           <div className="relative w-full max-w-md mx-auto z-20">
             {/* Main Video Restored - Shadow and rounding removed */}
-            <video 
+            <video
               autoPlay
               loop
               muted
               playsInline
               className="w-full h-auto block"
             >
-              <source src="https://res.cloudinary.com/drufv7gh5/video/upload/v1776891959/Developer_thinking_with_202604230004_fnrsuz.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/drufv7gh5/video/upload/v1777571495/watermark_removed_6546995e-5cb9-4e4e-8b45-fd20b7b00375_ctypri.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-          
+
           {/* Mobile/Tablet CTA (Below Video) */}
           <div className="xl:hidden w-full text-center mt-6 z-30">
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="inline-flex px-8 py-4 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-xl shadow-gray-900/20 hover:scale-105 items-center justify-center gap-2"
             >
               Book a Call
@@ -98,7 +98,7 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500 flex flex-col items-center gap-2"
