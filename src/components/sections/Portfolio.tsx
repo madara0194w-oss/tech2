@@ -3,13 +3,6 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: "Modern E-Commerce",
-    description: "A high-converting, fully responsive e-commerce platform with seamless checkout.",
-    tags: ["Next.js", "Tailwind", "Stripe"],
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop",
-    link: "https://ecom321.netlify.app/"
-  },
-  {
     title: "Doctor Portfolio",
     description: "A professional portfolio and appointment booking system for medical professionals.",
     tags: ["React", "Booking", "UI/UX"],
@@ -22,6 +15,13 @@ const projects = [
     tags: ["Vue.js", "Animations", "Design"],
     image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop",
     link: "https://aurelia1.netlify.app/"
+  },
+  {
+    title: "Dentist Three Coral",
+    description: "Modern dental practice website with online booking and patient portal.",
+    tags: ["React", "Tailwind", "Booking"],
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop",
+    link: "https://dentist-three-coral.vercel.app/"
   }
 ];
 
@@ -30,7 +30,7 @@ export function Portfolio() {
     <section id="portfolio" className="py-24 relative">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -38,7 +38,7 @@ export function Portfolio() {
           >
             Featured <span className="text-gray-900">Projects</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -62,29 +62,29 @@ export function Portfolio() {
               transition={{ delay: index * 0.1 }}
               className="group relative rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm aspect-[4/3] cursor-pointer block hover:shadow-xl transition-shadow"
             >
-              <img 
-                src={project.image} 
-                alt={project.title} 
+              <img
+                src={project.image}
+                alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80"></div>
-              
+
               <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                 <div className="flex flex-wrap gap-2 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   {project.tags.map(tag => (
-                     <span key={tag} className="text-xs font-medium px-2 py-1 rounded bg-white/20 text-white backdrop-blur-sm border border-white/30">
+                    <span key={tag} className="text-xs font-medium px-2 py-1 rounded bg-white/20 text-white backdrop-blur-sm border border-white/30">
                       {tag}
                     </span>
                   ))}
                 </div>
-                
+
                 <h3 className="text-2xl font-bold mb-2 font-heading flex items-center justify-between text-white">
                   {project.title}
                   <ExternalLink size={20} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </h3>
-                
+
                 <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
                   {project.description}
                 </p>

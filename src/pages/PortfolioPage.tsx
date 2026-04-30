@@ -1,19 +1,9 @@
-
 import { motion } from 'motion/react';
 import { Portfolio } from '../components/sections/Portfolio';
 import { ExternalLink, Layers, Smartphone, Globe, Code, Cpu } from 'lucide-react';
 import { useEffect } from 'react';
 
 const caseStudies = [
-  {
-    title: "E-Commerce Revolution",
-    role: "Full Stack Development",
-    challenge: "Existing platform was slow and had a 60% bounce rate on mobile devices.",
-    solution: "Built a headless commerce architecture using Next.js and Shopify, focusing on image optimization and edge caching.",
-    result: "120% increase in mobile conversion and 45% reduction in page load time.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    icon: <Globe size={24} />
-  },
   {
     title: "Medical Booking Ecosystem",
     role: "UI/UX & Platform Dev",
@@ -24,13 +14,13 @@ const caseStudies = [
     icon: <Smartphone size={24} />
   },
   {
-    title: "SaaS Analytics Dashboard",
-    role: "Data Visualization",
-    challenge: "Large data sets making dashboards unresponsive and difficult to interpret.",
-    solution: "Implemented D3.js with optimized data grouping algorithms and minimalist design language.",
-    result: "Instant data rendering for million-row datasets and improved user retention.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop",
-    icon: <Layers size={24} />
+    title: "Dentist Three Coral",
+    role: "Full Stack Development",
+    challenge: "Dental practice needed modern online presence with seamless patient onboarding and appointment management.",
+    solution: "Built responsive booking system with patient portal, automated reminders, and treatment plan visualization.",
+    result: "40% increase in new patient bookings and 50% reduction in no-shows.",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop",
+    icon: <Globe size={24} />
   }
 ];
 
@@ -100,7 +90,6 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Tech Stack Section */}
       <section className="py-24 bg-gray-900 text-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col xl:flex-row justify-between items-center gap-12">
