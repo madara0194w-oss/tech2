@@ -1441,8 +1441,19 @@
             return deadline;
         }
 
-        // Reset countdown on every load to 50 hours
-        let deadline = setCountdown();
+        // Persist countdown across refresh using localStorage
+        let deadline;
+        const stored = localStorage.getItem('deadline');
+        if (stored) {
+            const parsed = new Date(stored);
+            if (!Number.isNaN(parsed.getTime()) && parsed.getTime() > Date.now()) {
+                deadline = parsed;
+            } else {
+                deadline = setCountdown();
+            }
+        } else {
+            deadline = setCountdown();
+        }
 
         function updateCountdown() {
             const now = new Date().getTime();
