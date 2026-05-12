@@ -1434,20 +1434,15 @@
         // ===== COUNTDOWN TIMER =====
         function setCountdown() {
             const deadline = new Date();
-            deadline.setHours(deadline.getHours() + 47);
-            deadline.setMinutes(deadline.getMinutes() + 23);
-            deadline.setSeconds(deadline.getSeconds() + 59);
+            deadline.setHours(deadline.getHours() + 50);
+            deadline.setMinutes(deadline.getMinutes() + 0);
+            deadline.setSeconds(deadline.getSeconds() + 0);
             localStorage.setItem('deadline', deadline.toISOString());
             return deadline;
         }
 
-        let deadline;
-        const stored = localStorage.getItem('deadline');
-        if (stored && new Date(stored) > new Date()) {
-            deadline = new Date(stored);
-        } else {
-            deadline = setCountdown();
-        }
+        // Reset countdown on every load to 50 hours
+        let deadline = setCountdown();
 
         function updateCountdown() {
             const now = new Date().getTime();
