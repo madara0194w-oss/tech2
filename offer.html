@@ -1431,36 +1431,42 @@
     </div>
 
     <script>
-        // ===== COUNTDOWN TIMER =====
-        function setCountdown() {
-            const deadline = new Date();
-            deadline.setHours(deadline.getHours() + 72);
-            deadline.setMinutes(deadline.getMinutes() + 0);
-            deadline.setSeconds(deadline.getSeconds() + 0);
-            localStorage.setItem('deadline', deadline.toISOString());
-            return deadline;
+        // ===== COUNTDOWN TIMER (GLOBAL) =====
+        // Uses server-provided deadline so all users see the same countdown.
+        // Set `OFFER_DEADLINE_ISO` in Vercel Env Vars (Project Settings) for a truly global deadline.
+        async function getDeadline() {
+            try {
+                const res = await fetch('/api/offer-deadline', { cache: 'no-store' });
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data && data.deadlineIso) {
+                        const d = new Date(data.deadlineIso);
+                        if (!Number.isNaN(d.getTime())) return d;
+                    }
+                }
+            } catch {}
+
+            // Fallback: per-device persistence (better than restarting on refresh)
+            const stored = localStorage.getItem('deadline');
+            if (stored) {
+                const parsed = new Date(stored);
+                if (!Number.isNaN(parsed.getTime()) && parsed.getTime() > Date.now()) return parsed;
+            }
+
+            const d = new Date(Date.now() + 72 * 60 * 60 * 1000);
+            localStorage.setItem('deadline', d.toISOString());
+            return d;
         }
 
-        // Persist countdown across refresh using localStorage
         let deadline;
-        const stored = localStorage.getItem('deadline');
-        if (stored) {
-            const parsed = new Date(stored);
-            if (!Number.isNaN(parsed.getTime()) && parsed.getTime() > Date.now()) {
-                deadline = parsed;
-            } else {
-                deadline = setCountdown();
-            }
-        } else {
-            deadline = setCountdown();
-        }
 
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = deadline - now;
 
             if (distance < 0) {
-                deadline = setCountdown();
+                // When expired, refresh from server (or fallback local reset).
+                getDeadline().then((d) => (deadline = d));
                 return;
             }
 
@@ -1474,8 +1480,11 @@
             document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
         }
 
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+        getDeadline().then((d) => {
+            deadline = d;
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        });
 
         // ===== PARTICLES =====
         function createParticles() {
