@@ -3,6 +3,13 @@ function computeFallbackDeadlineIso(hoursFromNow: number) {
   return deadline.toISOString();
 }
 
+function computeDeterministicWindowDeadlineIso(windowHours: number) {
+  const windowMs = windowHours * 60 * 60 * 1000;
+  const now = Date.now();
+  const nextBoundary = Math.ceil(now / windowMs) * windowMs;
+  return new Date(nextBoundary).toISOString();
+}
+
 export default function handler(req: any, res: any) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store');
@@ -15,9 +22,10 @@ export default function handler(req: any, res: any) {
     }
   }
 
-  // Fallback: not shared across all users reliably (depends on serverless instance).
-  // Set `OFFER_DEADLINE_ISO` in Vercel project env vars for a truly global deadline.
-  return res
-    .status(200)
-    .json({ deadlineIso: computeFallbackDeadlineIso(72), source: 'fallback' });
+  // Deterministic fallback (same for all users/devices, and won't reset on refresh):
+  // rounds up to the next 72-hour boundary from Unix epoch.
+  return res.status(200).json({
+    deadlineIso: computeDeterministicWindowDeadlineIso(72),
+    source: 'deterministic'
+  });
 }
