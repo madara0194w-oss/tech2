@@ -1434,7 +1434,7 @@
         // ===== COUNTDOWN TIMER =====
         function setCountdown() {
             const deadline = new Date();
-            deadline.setHours(deadline.getHours() + 50);
+            deadline.setHours(deadline.getHours() + 72);
             deadline.setMinutes(deadline.getMinutes() + 0);
             deadline.setSeconds(deadline.getSeconds() + 0);
             localStorage.setItem('deadline', deadline.toISOString());
@@ -1453,7 +1453,8 @@
                 return;
             }
 
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            // Total remaining hours (not modulo 24)
+            const hours = Math.floor(distance / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
